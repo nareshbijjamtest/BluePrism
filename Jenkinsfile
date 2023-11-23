@@ -23,7 +23,7 @@ pipeline
 						Set-Location "C:\\Users\\Naresh Bijjam\\.jenkins\\"
 						$currpath = Get-Location; Write-Host "Current Working directory: $currpath";
 						
-						$filename = "./"+"${env.bpfilePath}" ;Write-Host "File to be deployed: $filename"
+						$filename = "./"+"${env:bpfilePath}" ;Write-Host "File to be deployed: $filename"
 						
 						$automatec_exe = "C:\\Program Files\\Blue Prism Limited\\Blue Prism Automate\\Automatec.exe"
 						

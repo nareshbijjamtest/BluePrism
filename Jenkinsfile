@@ -19,7 +19,7 @@ pipeline
 				script 
 				{
 					withEnv ([
-						"buildno=${env.BUILD NUMBER}",
+						"buildno=${env.BUILD_NUMBER}",
 						"workspace_dir=${env:WORKSPACE}",
 						"bpfilePath=${params.filePath}"
 						]) {

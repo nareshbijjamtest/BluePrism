@@ -29,11 +29,11 @@ pipeline
 						
 						#Deploy Blueprism release file
 						if ((Test-Path -path $filename)) {
-						#Deploy Blueprism release artifacts file (Blueprism Release Package, Process Export or Business Object Export)
-						if ($filename. EndsWith(".bprelease") -or $filename. EndsWith(".bprelease`"") -or $filename. EndsWith(".bpprocess") -or
-						$filename.EndsWith(".bpprocess`"") -or $filename.EndsWith(".bpobject") -or $filename.EndsWith(".bpobject`"")) {
-							Write-Host "`nImporting Blueprism release package from... $filename"
-							& $automatec_exe /importrelease "$filename" /overwrite /user admin ZAQ!zaq1 /dbconname LocalDB Connection
+							#Deploy Blueprism release artifacts file (Blueprism Release Package, Process Export or Business Object Export)
+							if ($filename. EndsWith(".bprelease") -or $filename. EndsWith(".bprelease`"") -or $filename. EndsWith(".bpprocess") -or
+							$filename.EndsWith(".bpprocess`"") -or $filename.EndsWith(".bpobject") -or $filename.EndsWith(".bpobject`"")) {
+								Write-Host "`nImporting Blueprism release package from... $filename"
+								& $automatec_exe /importrelease "$filename" /overwrite /user admin ZAQ!zaq1 /dbconname LocalDB Connection
 						}
 						
 					}

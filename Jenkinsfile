@@ -20,12 +20,12 @@ pipeline
 						]) {
 						powershell '''
 						#Deploy Blueprism Artefacts i.e. BusineTs Objects/Process exports, releases or JSON input for Envrinment Varibles
-						Set-Location "C:\\Users\\Naresh Bijjam\\.jenkins\\"
+						Set-Location "C:\\Users\\Naresh Bijjam\\.jenkins\\workspace\\"
 						$currpath = Get-Location; Write-Host "Current Working directory: $currpath";
 						
 						$filename = "./"+"${env:bpfilePath}" ;Write-Host "File to be deployed: $filename"
 						
-						$automatec_exe = "C:\\Program Files\\Blue Prism Limited\\Blue Prism Automate\\Automatec.exe"
+						$automatec_exe = "C:\\Program Files\\Blue Prism Limited\\Blue Prism Automate\\AutomateC.exe"
 						Write-Host "Current Working directory:++++++++++++++++++++++++++++++++++++++ $automatec_exe $filename";
 						#Deploy Blueprism release file
 						if (($filename)) {

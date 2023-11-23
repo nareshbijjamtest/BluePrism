@@ -16,15 +16,15 @@ pipeline
 				{
 					withEnv ([
 						"buildno=${env.BUILD_NUMBER}",
-						"workspace_dir=${env:WORKSPACE}",
+						"workspace_dir=${env.WORKSPACE}",
 						"bpfilePath=${params.filePath}"
 						]) {
 						powershell '''
 						#Deploy Blueprism Artefacts i.e. BusineTs Objects/Process exports, releases or JSON input for Envrinment Varibles
-						Set-Location $(env:workspace_dir)
+						Set-Location $(env.workspace_dir)
 						$currpath = Get-Location; Write-Host "Current Working directory: $currpath";
 						
-						$filename = "./"+"${env:bpfilePath}" ;Write-Host "File to be deployed: $filename"
+						$filename = "./"+"${env.bpfilePath}" ;Write-Host "File to be deployed: $filename"
 						
 						$automatec_exe = "C:\\Program Files\\Blue Prism Limited\\Blue Prism Automate\\Automatec.exe"
 						

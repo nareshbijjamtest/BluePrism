@@ -1,10 +1,6 @@
 pipeline
 	{
-	    //agent any
-
-		agent {
-			label 'windows-master'
-	}
+	    agent any
 	
 	environment {
 		EMAIL_RECIPIENT = 'nareshbijjamtest@gmail.com'

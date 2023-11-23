@@ -19,9 +19,9 @@ pipeline
 				script 
 				{
 					withEnv ([
-						"buildno=$(env.BUILD NUMBER]",
-						"workspace_dir=$(env:WORKSPACE]",
-						"bpfilePath=$params.filePath)"
+						"buildno=${env.BUILD NUMBER}",
+						"workspace_dir=${env:WORKSPACE}",
+						"bpfilePath=${params.filePath}"
 						]) {
 						powershell '''
 						#Deploy Blueprism Artefacts i.e. BusineTs Objects/Process exports, releases or JSON input for Envrinment Varibles

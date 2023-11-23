@@ -34,7 +34,7 @@ pipeline
 							if ($filename. EndsWith(".bprelease") -or $filename. EndsWith(".bprelease`"") -or $filename. EndsWith(".bpprocess") -or
 							$filename.EndsWith(".bpprocess`"") -or $filename.EndsWith(".bpobject") -or $filename.EndsWith(".bpobject`"")) {
 								Write-Host "`nImporting Blueprism release package from... $filename"
-								& $automatec_exe /importrelease "$filename" /overwrite /user admin ZAQ!zaq1 /dbconname "LocalDB Connection"
+								& $automatec_exe /importrelease "$filename" /overwrite /user "admin" "ZAQ!zaq1" /dbconname "LocalDB Connection"
 						}
 					}
 				'''	

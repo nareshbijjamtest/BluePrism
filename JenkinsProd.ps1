@@ -28,7 +28,7 @@ pipeline
 						$automatec_exe = "C:\\Program Files\\Blue Prism Limited\\Blue Prism Automate\\Automatec.exe"
 						Write-Host "Current Working directory:++++++++++++++++++++++++++++++++++++++ $automatec_exe $filename";
 						#Deploy Blueprism release file
-						if ((Test-Path -path $filename)) {
+						if (($filename)) {
 							Write-Host "1111111111111111111111111:++++++++++++++++++++++++++++++++++++++ $automatec_exe $filename";
 							#Deploy Blueprism release artifacts file (Blueprism Release Package, Process Export or Business Object Export)
 							if ($filename. EndsWith(".bprelease") -or $filename. EndsWith(".bprelease`"") -or $filename. EndsWith(".bpprocess") -or

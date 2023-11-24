@@ -50,7 +50,7 @@ pipeline
 					"email_Recipients=$EMAIL_RECIPIENT"
 					]) {
 						echo "send email: ${env:email_Recipients}"
-						Mail(to: "${env:email_Recipients}",
+						emailext (to: "${env:email_Recipients}",
 						subject: 'BP',
 						body: 'BP'
 					)

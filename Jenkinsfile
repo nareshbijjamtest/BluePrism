@@ -16,7 +16,7 @@ pipeline
 				{
 					withEnv ([
 						"buildno=${env.BUILD_NUMBER}",
-						"workspace_dir=${WORKSPACE}"
+						"workspace_dir=${WORKSPACE}",
 						"bpfilePath=${params.filePath}"
 						]) {
 						powershell '''

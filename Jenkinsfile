@@ -43,6 +43,21 @@ pipeline
 				}
 			}
 		}
+		stage('Send Mail') {
+			steps {
+				script {
+					withEnv([
+					"email_Recipients=$EMAIL_RECIPIENT"
+					]) {
+						echo "send email: ${env:email_Recipients}"
+						Mail(to: "${env:email_Recipients}",
+						subject: 'BP',
+						body: 'BP'
+					)
+					}
+				}
+		}
+		}
 	
 		}
 		
